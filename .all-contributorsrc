@@ -1,0 +1,15 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [],
+  "contributorsPerLine": 7,
+  "projectName": "onecx-portal-iam-kc-svc",
+  "projectOwner": "onecx",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true,
+  "badgeTemplate": "[![All Contributors](https://img.shields.io/github/all-contributors/onecx/onecx-portal-iam-kc-svc?logo=GitHub&style=for-the-badge)](#contributors)"
+}
