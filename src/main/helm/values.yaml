@@ -1,0 +1,10 @@
+app:
+  image:
+    repository: "1000kit/${project.artifactId}"
+    tag: 999-SNAPSHOT
+  db:
+    enabled: false
+  livenessProbe:
+    url: /health
+  readinessProbe:
+    url: /health
