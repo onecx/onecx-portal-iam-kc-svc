@@ -6,7 +6,7 @@
   <parent>
     <groupId>io.github.onecx</groupId>
     <artifactId>onecx-quarkus3-parent</artifactId>
-    <version>0.3.0</version>
+    <version>0.4.0</version>
   </parent>
 
   <artifactId>onecx-portal-iam-kc-svc</artifactId>
