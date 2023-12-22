@@ -1,8 +1,8 @@
 apiVersion: v2
-name: onecx-portal-iam-kc
+name: onecx-iam-kc-svc
 version: 0.0.0
 appVersion: 0.0.0
-description: Onecx Portal IAM for Keycloak
+description: Onecx IAM for Keycloak service
 keywords:
   - iam
   - keycloak

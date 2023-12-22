@@ -1,4 +1,4 @@
-package io.github.onecx.portal.iam.kc.rs.v1.controllers;
+package io.github.onecx.iam.kc.rs.external.v1.controllers;
 
 import io.quarkus.test.junit.QuarkusIntegrationTest;
 

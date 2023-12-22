@@ -1,16 +1,16 @@
-package io.github.onecx.portal.iam.kc.rs.v1.controllers;
+package io.github.onecx.iam.kc.rs.external.v1.controllers;
 
 import static io.restassured.RestAssured.given;
 
 import org.junit.jupiter.api.Test;
 
-import io.github.onecx.portal.iam.test.AbstractKeycloakAminTest;
+import io.github.onecx.iam.kc.test.AbstractTest;
 import io.quarkus.test.junit.QuarkusTest;
 import io.quarkus.test.keycloak.client.KeycloakTestClient;
 import io.restassured.http.ContentType;
 
 @QuarkusTest
-class KeycloakAdminRestControllerPasswordTest extends AbstractKeycloakAminTest {
+class KeycloakAdminRestControllerPasswordTest extends AbstractTest {
 
     KeycloakTestClient keycloakClient = new KeycloakTestClient();
 

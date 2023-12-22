@@ -1,6 +1,6 @@
-package io.github.onecx.portal.iam.kc.rs.v1.controllers;
+package io.github.onecx.iam.kc.rs.external.v1.controllers;
 
-import static io.github.onecx.portal.iam.kc.rs.v1.controllers.Security.ROLE_PORTAL_ADMIN;
+import static io.github.onecx.iam.kc.rs.external.v1.controllers.Security.ROLE_PORTAL_ADMIN;
 import static io.restassured.RestAssured.given;
 
 import org.junit.jupiter.api.Test;

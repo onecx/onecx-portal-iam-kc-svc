@@ -1,10 +1,10 @@
-package io.github.onecx.portal.iam.test;
+package io.github.onecx.iam.kc.test;
 
 import org.eclipse.microprofile.config.ConfigProvider;
 
 import io.quarkus.test.common.DevServicesContext;
 
-public abstract class AbstractKeycloakAminTest {
+public abstract class AbstractTest {
 
     DevServicesContext testContext;
     public static String CLIENT_ID_PROP = "quarkus.oidc.client-id";

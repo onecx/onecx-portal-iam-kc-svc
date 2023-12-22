@@ -1,10 +1,6 @@
 app:
+  name: kc-svc
   image:
-    repository: "1000kit/${project.artifactId}"
-    tag: 999-SNAPSHOT
+    repository: "onecx/onecx-iam-kc-svc"
   db:
     enabled: false
-  livenessProbe:
-    url: /health
-  readinessProbe:
-    url: /health
