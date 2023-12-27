@@ -13,7 +13,7 @@ import org.mapstruct.Mapping;
 import gen.io.github.onecx.iam.kc.internal.model.UserDTO;
 import gen.io.github.onecx.iam.kc.internal.model.UserPageResultDTO;
 import gen.io.github.onecx.iam.kc.internal.model.UserSearchCriteriaDTO;
-import io.github.onecx.iam.kc.domain.model.PageResult;
+import io.github.onecx.iam.kc.domain.model.UserPageResult;
 import io.github.onecx.iam.kc.domain.model.UserSearchCriteria;
 
 @Mapper
@@ -29,7 +29,7 @@ public interface UserMapper {
     UserSearchCriteria mapDto(UserSearchCriteriaDTO dto);
 
     @Mapping(target = "removeStreamItem", ignore = true)
-    UserPageResultDTO map(PageResult pageResult);
+    UserPageResultDTO map(UserPageResult pageResult);
 
     UserDTO map(UserRepresentation user);
 

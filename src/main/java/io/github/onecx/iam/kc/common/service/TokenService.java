@@ -35,20 +35,20 @@ public class TokenService {
     @Context
     HttpHeaders headers;
 
-    public TokenInfo getUserId() {
+    public TokenInfo getTokenInfo() {
         var apmPrincipalToken = headers.getHeaderString(config.headerToken());
         if (apmPrincipalToken == null || apmPrincipalToken.isBlank()) {
             log.error("Missing APM principal token: " + config.headerToken());
             throw new TokenException("Missing APM principal token");
         }
         try {
-            return getUserId(apmPrincipalToken);
+            return getTokenInfo(apmPrincipalToken);
         } catch (Exception ex) {
             throw new TokenException("Error parsing principal token", ex);
         }
     }
 
-    private TokenInfo getUserId(String apmPrincipalToken)
+    private TokenInfo getTokenInfo(String apmPrincipalToken)
             throws InvalidJwtException, JoseException, MalformedClaimException, ParseException {
 
         String userId;

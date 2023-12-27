@@ -7,10 +7,10 @@ import org.keycloak.representations.idm.UserRepresentation;
 import lombok.Getter;
 
 @Getter
-public class PageResult {
+public class UserPageResult {
 
-    public static PageResult empty() {
-        return new PageResult(0, List.of(), Page.of(0, 1));
+    public static UserPageResult empty() {
+        return new UserPageResult(0, List.of(), Page.of(0, 1));
     }
 
     private final long totalElements;
@@ -23,7 +23,7 @@ public class PageResult {
 
     private final List<UserRepresentation> stream;
 
-    public PageResult(long totalElements, List<UserRepresentation> stream, Page page) {
+    public UserPageResult(long totalElements, List<UserRepresentation> stream, Page page) {
         this.totalElements = totalElements;
         this.stream = stream;
         this.number = page.number();

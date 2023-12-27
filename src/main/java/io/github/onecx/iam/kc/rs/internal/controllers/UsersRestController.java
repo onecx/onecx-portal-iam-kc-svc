@@ -20,7 +20,7 @@ import io.github.onecx.iam.kc.rs.internal.mappers.UserMapper;
 
 @LogService
 @ApplicationScoped
-public class UsersInternalRestController implements UsersInternalApi {
+public class UsersRestController implements UsersInternalApi {
 
     @Inject
     KeycloakAdminService adminService;
@@ -36,7 +36,7 @@ public class UsersInternalRestController implements UsersInternalApi {
 
     @Override
     public Response searchUsersByCriteria(UserSearchCriteriaDTO userSearchCriteriaDTO) {
-        TokenInfo tokenInfo = tokenService.getUserId();
+        TokenInfo tokenInfo = tokenService.getTokenInfo();
         var criteria = mapper.map(userSearchCriteriaDTO, tokenInfo.realmName());
         var usersPage = adminService.searchUsers(criteria);
         return Response.ok(mapper.map(usersPage)).build();

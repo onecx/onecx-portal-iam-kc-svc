@@ -32,7 +32,7 @@ public class AdminUserRestController implements AdminUserControllerApi {
 
     @Override
     public Response resetPassword(UserResetPasswordRequestDTOV1 userResetPasswordRequestDTOV1) {
-        TokenInfo tokenInfo = tokenService.getUserId();
+        TokenInfo tokenInfo = tokenService.getTokenInfo();
         adminService.resetPassword(tokenInfo, userResetPasswordRequestDTOV1.getPassword());
         return null;
     }

@@ -13,7 +13,7 @@ import org.tkit.quarkus.log.cdi.LogService;
 
 import io.github.onecx.iam.kc.common.model.TokenInfo;
 import io.github.onecx.iam.kc.domain.model.Page;
-import io.github.onecx.iam.kc.domain.model.PageResult;
+import io.github.onecx.iam.kc.domain.model.UserPageResult;
 import io.github.onecx.iam.kc.domain.model.UserSearchCriteria;
 import io.quarkus.keycloak.admin.client.common.KeycloakAdminClientConfig;
 
@@ -32,7 +32,7 @@ public class KeycloakAdminService {
         keycloak.realm(tokenInfo.realmName()).users().get(tokenInfo.userId()).resetPassword(resetPassword);
     }
 
-    public PageResult searchUsers(UserSearchCriteria criteria) {
+    public UserPageResult searchUsers(UserSearchCriteria criteria) {
 
         var first = criteria.getPageNumber() * criteria.getPageSize();
         var count = keycloak.realm(criteria.getRealmName()).users().count(criteria.getQuery());
@@ -41,6 +41,6 @@ public class KeycloakAdminService {
                 .users()
                 .search(criteria.getQuery(), first, criteria.getPageSize(), true);
 
-        return new PageResult(count, users, Page.of(criteria.getPageNumber(), criteria.getPageSize()));
+        return new UserPageResult(count, users, Page.of(criteria.getPageNumber(), criteria.getPageSize()));
     }
 }
