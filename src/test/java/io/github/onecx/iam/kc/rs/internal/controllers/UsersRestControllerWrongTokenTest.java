@@ -30,7 +30,7 @@ import io.smallrye.jwt.util.KeyUtils;
 
 @QuarkusTest
 @TestHTTPEndpoint(UsersRestController.class)
-public class UsersRestControllerWrongTokenTest extends AbstractTest {
+class UsersRestControllerWrongTokenTest extends AbstractTest {
     @InjectMock
     TokenConfig tokenConfig;
 

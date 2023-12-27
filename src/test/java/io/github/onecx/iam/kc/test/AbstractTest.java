@@ -21,7 +21,6 @@ public abstract class AbstractTest {
     public static String CLIENT_ID_PROP = "quarkus.oidc.client-id";
     public static String USER_BOB = "bob";
     public static String USER_ALICE = "alice";
-    public static String PASSWORD_ALICE = "alice";
 
     protected String getClientId() {
         return getPropertyValue(CLIENT_ID_PROP, "quarkus-app");
